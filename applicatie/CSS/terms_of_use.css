@@ -1,0 +1,19 @@
+.body {
+    background-image: url("../images/background/Terms_of_use.jpg");
+    background-size: cover;
+}
+
+.rectangle {
+    width: 1400px;
+    height: 780px;
+    background: rgba(var(--header), 0.8);
+    margin: 100px auto auto auto;
+    border-radius: 25px;
+}
+
+.tou-text {
+    color: rgb(var(--text));
+    padding-left: 50px;
+    padding-top: 60px;
+    padding-right: 50px;
+}

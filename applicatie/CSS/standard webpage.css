@@ -1,0 +1,200 @@
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --text: 250, 250, 255;
+    --header: 18, 14, 37;
+    --primary_Button: 229, 0, 86;
+    --background: 15, 35, 61;
+    --accent: 34, 38, 43;
+}
+
+.text {
+    color: rgb(var(--text));
+}
+
+body {
+    font-family: "Helvectica", sans-serif;
+    background-color: rgb(var(--background))
+}
+
+.logo {
+    width: 150px;
+}
+
+header {
+    top: 0;
+    position: fixed;
+    background-color: rgba(var(--header), 0.8 );
+    width: 100%;
+    border-bottom: 1px solid rgba(var(--accent), 0.1);
+    z-index: 1000;
+}
+
+header nav {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0.3rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+header ul li {
+    padding-right: 30px;
+}
+
+header ul a {
+    text-decoration: none;
+    color: rgb(var(--text));
+    padding: 0 1rem;
+    text-transform: capitalize;
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+.menu {
+    display: flex;
+    flex-flow: column;
+    gap: 60px;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-logo i {
+    font-size: x-large;
+}
+
+.menu-logo:hover {
+    color: rgb(var(--primary_Button));
+}
+
+.menu-logo:hover img {
+    filter: hue-rotate(-30.5deg);
+}
+
+.hamburger label:hover span {
+    background: rgb(var(--primary_Button));
+}
+
+.hamburger input[type="checkbox"] {
+    display: none;
+}
+
+.hamburger label {
+    cursor: pointer;
+    display: block;
+    width: 30px;
+    height: 20px;
+}
+
+.hamburger label span {
+    display: block;
+    border-radius: 100px;
+    height: 3px;
+    margin-bottom: 5px;
+    padding-left: 15px;
+    background-color: rgb(var(--text));
+    transition: all 0.3s ease-out;
+}
+
+.hamburger .menu {
+    position: fixed;
+    right: 0;
+    top: 82px;
+    height: 87.9%;
+    width: 0;
+    overflow: hidden;
+    transition: width 0.3s ease-in-out;
+    background-color: rgba(var(--primary_Button), 0.9);
+}
+
+.hamburger input[type="checkbox"]:checked ~ .menu {
+    width: 40%;
+}
+
+.menu-nav {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+}
+
+.menu-nav button {
+    cursor: pointer;
+    border: 0;
+    border-radius: 25px;
+    font-weight: 600;
+    margin: 0 5px;
+    width: 200px;
+    padding: 10px 0;
+    box-shadow: 0 0 20px rgba(var(--accent), 0.2);
+    transition: 0.5s;
+}
+
+.menu {
+    display: flex;
+    flex-flow: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu button {
+    cursor: pointer;
+    border: 0;
+    border-radius: 25px;
+    font-weight: 700;
+    margin: 10px 10px;
+    width: 50%;
+    padding: 20px 0;
+    box-shadow: 0 0 20px rgba(var(--accent), 0.2);
+    transition: 0.5s;
+}
+
+.button,
+.menu-logo,
+.more {
+    color: rgb(var(--primary_Button));
+    background-color: rgba(var(--text), 1);
+    border: 2px solid rgba(var(--primary_Button), 1);
+}
+
+.menu button:hover,
+.menu-nav button:hover,
+.more-flights button:hover {
+    color: rgb(var(--background));
+    box-shadow: 0 0 20px rgba(var(--background), 1);
+    background-color: rgba(var(--primary_Button), 1);
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background: rgba(var(--header), 0.9);
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+footer p {
+    text-align: center;
+}
+
+footer span {
+    color: rgb(var(--primary_Button));
+}
